@@ -6,7 +6,6 @@ class Zoo():
     def __init__(self, zoo_name):
         self.animals = []
         self.name = zoo_name 
-        self.animals = []
 #3
     def add_animal(self,new_animal):
         if new_animal not in self.animals:
@@ -28,6 +27,7 @@ class Zoo():
         array = {}
         for anml in self.animals:
             letter = anml[0]
+            #fix it
             for f_letter in anml:
                 # print(f_letter)
                 if letter == f_letter:

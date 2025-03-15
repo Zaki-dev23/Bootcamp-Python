@@ -35,7 +35,7 @@ class Farm():
         # print(more_then_1)
         # print(equal_1)
         # print(array_of_animals)
-        print(f"McDonald’s farm has {array_of_animals[0]}, {array_of_animals[1]} and {array_of_animals[2]}.")
+        print(f"{self.animal}’s farm has {array_of_animals[0]}, {array_of_animals[1]} and {array_of_animals[2]}.")
             
         
 macdonald = Farm("McDonald")
