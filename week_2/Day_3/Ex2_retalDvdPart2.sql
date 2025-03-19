@@ -1,0 +1,80 @@
+-- select l.language_id,m.title, m.film_id, l.name as language
+-- from film m
+-- inner join language l
+-- on m.film_id = l.language_id
+--1
+-- update film 
+-- set language_id = (select language_id from language where lower(name)=lower('french'))
+-- where title = 'Ace Goldfinger' --before :italian /after :frensh
+--2
+--The foreign keys are 'address_id' and 'store_id' defined for the customer table
+--The way in which we INSERT into the customer table, verfied is address insert in the customer table is the same in the address table that insert by address_id (FOREUGN KEY) for find the costumer has that address same think about the store table
+--3
+-- DROP table customer_review
+--actually, it is easy step tp drop this table, but yoy need to check if table has the important data or is in relationship with the outher table.
+--4
+-- select count(*) as inreturned from rental where return_date is null
+--5
+-- select  f.title , f.rental_rate
+-- from film f
+-- inner join inventory i
+-- on f.film_id = i.film_id
+-- inner join rental r
+-- on f.film_id = r.inventory_id
+-- where r.return_date is null
+-- order by f.rental_rate desc
+-- limit 30
+--6
+--6-1
+-- select distinct a.first_name, a.last_name, f.title 
+-- from film f
+-- inner join film_actor f_a
+-- on f_a.actor_id = f.film_id
+-- inner join actor a
+-- on f_a.actor_id = f.film_id
+-- where a.first_name = 'Penelope' and last_name ='Monroe' and f.description 
+-- like '%sumo wrestler%'
+--n'exist pas
+--6-2
+-- select title, rating, length
+-- from film
+-- where rating = 'R' and length < 60
+--6-3
+-- select distinct f.title
+-- from customer c
+-- inner join rental r
+-- on c.customer_id = r.customer_id
+-- inner join inventory i
+-- on r.inventory_id = i.inventory_id
+-- inner join film f
+-- on f.film_id = i.film_id
+-- inner join payment p
+-- on c.customer_id = p.customer_id
+-- where r.return_date 
+-- between '2005-07-28' and '2005-08-01' 
+-- and c.first_name = 'Matthew' and c.last_name = 'Mahan'
+-- and p.amount > 4.00
+--6-4
+-- SELECT f.film_id, f.title , f.replacement_cost
+-- FROM film f
+-- JOIN inventory i ON f.film_id = i.film_id
+-- JOIN rental r ON i.inventory_id = r.inventory_id
+-- JOIN customer c ON r.customer_id = c.customer_id
+-- WHERE c.first_name = 'Matthew' 
+-- AND c.last_name = 'Mahan'
+-- AND (f.title ILIKE '%boat%' OR f.description ILIKE '%boat%')
+-- ORDER BY f.replacement_cost DESC
+-- LIMIT 1;
+
+
+
+
+-- select * from inventory;
+-- select * from actor where first_name ='Penelope';
+-- select * from rental;
+-- select * from customer;
+-- select * from film;
+-- select * from payment p
+-- inner join customer c
+-- on c.customer_id = p.customer_id
+-- where c.first_name = 'Matthen';

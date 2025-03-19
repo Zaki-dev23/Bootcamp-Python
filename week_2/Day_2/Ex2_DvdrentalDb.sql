@@ -38,7 +38,6 @@ from city
 inner join country
 on city.country_id = country.country_id;
 --15
-SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date, payment.staff_id 
+SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date
 FROM customer 
 JOIN payment ON customer.customer_id = payment.customer_id 
-ORDER BY payment.staff_id;

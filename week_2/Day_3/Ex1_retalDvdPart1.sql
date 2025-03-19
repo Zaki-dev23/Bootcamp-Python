@@ -1,0 +1,53 @@
+--1
+-- select * from language
+--2
+-- select m.title, m.description, l.name as language
+-- from film m
+-- inner join language l
+-- on l.language_id = m.film_id
+--3
+-- select m.title, m.description, l.name as language
+-- from film m
+-- left join language l
+-- on l.language_id = m.film_id
+--4
+-- create table new_film (
+-- id serial primary key,
+-- name varchar(100) not null
+-- )
+-- insert into new_film(name) 
+-- values
+-- ('john wich'),
+-- ('pirates of the caribien'),
+-- ('extraction 1')
+--5
+-- create table customer_review(
+-- review_id serial primary key,
+-- film_id integer not null,
+-- language_id integer not null,
+-- title varchar(250) not null,
+-- score integer not null check (score between 1 and 10),
+-- review_text text not null,
+-- last_update timestamp not null default current_timestamp,
+-- foreign key (film_id) references new_film(id) on delete cascade,
+-- foreign key (language_id) references language(language_id) on delete cascade
+-- )
+--6
+-- insert into customer_review(film_id,language_id,title,score,review_text) 
+-- values
+-- ((select film_id from film where title = 'Academy Dinosaur' ),
+-- (select language_id from language where name = 'English'),
+-- 'Amizing movie!',
+-- 8,
+-- 'I loved this movie! The actors are excellent and the story is captivating.'
+-- ),
+-- ((select film_id from film where title = 'Ace Goldfinger' ),
+-- (select language_id from language where name = 'Italian'),
+-- 'Awsome movie!',
+-- 7,
+-- 'I expected more from this director. The movie is a bit predictable and the characters are not well-developed.'
+-- )
+--7
+-- delete from new_film where 
+-- select * from customer_review
+select * from new_film
