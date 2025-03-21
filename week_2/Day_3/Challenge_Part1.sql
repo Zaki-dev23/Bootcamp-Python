@@ -1,0 +1,67 @@
+-- --1
+-- create table Book(
+-- book_id SERIAL PRIMARY KEY, 
+-- title varchar(100) NOT NULL, 
+-- author varchar(50) NOT NULL
+-- );
+-- --2
+-- insert into Book(title,author) values 
+-- ('Alice In Wonderland','Lewis Carroll' ), 
+-- ('Harry Potter','J.K Rowling' ), 
+-- ('To kill a mockingbird','Harper Lee' )
+-- --3
+-- create table Student(
+-- student_id serial primary key,
+-- name varchar(50) not null,
+-- age integer not null
+-- );
+-- --4
+-- insert into Student(name,age) values
+-- ('John',12),
+-- ('Lera',11),
+-- ('Patrick',10),
+-- ('Bob',14)
+--5 
+-- create table Library(
+-- book_fk_id int ,
+-- student_fk_id int,
+-- borrowed_date date,
+-- primary key (book_fk_id, student_fk_id),
+-- foreign key (book_fk_id) references Book(book_id) on delete cascade on update cascade,
+-- foreign key (student_fk_id) references Student(student_id) on delete cascade on update cascade
+-- )
+--6
+-- insert into library(book_fk_id,student_fk_id,borrowed_date) 
+-- values
+--   ((select book_id from Book where title = 'Alice In Wonderland'),
+--    (select student_id from Student where name = 'John'),
+--    '15/02/2022'),
+--   ((select book_id from Book where title = 'To kill a mockingbird'),
+--    (select student_id from Student where name = 'Bob'),
+--    '03/03/2021'),
+--   ((select book_id from Book where title = 'Alice In Wonderland'),
+--    (select student_id from Student where name = 'Lera'),
+--    '23/05/2021'),
+--   ((select book_id from Book where title = 'Harry Potter'),
+--    (select student_id from Student where name = 'Bob'),
+--    '12/08/2021')
+--7
+--7-1
+-- select * from library
+--7-2
+-- select s.name , b.title as book_borrowed from Student s
+-- join Library l
+-- on l.student_fk_id = s.student_id
+-- join Book b
+-- on l.book_fk_id = b.book_id
+--7-3
+-- select avg(s.age) from Student s
+-- join Library l on l.student_fk_id = s.student_id
+-- join Book b on b.book_id = l.book_fk_id
+-- where b.title = 'Alice In Wonderland'
+--7-4
+-- delete from Student where name = 'John'
+-- select * from Student;
+-- select * from Book
+------  Comme ON DELETE CASCADE est activé sur student_fk_id, tous les enregistrements d’emprunt liés à Bob seront automatiquement supprimés de la table Bibliothèque.
+
