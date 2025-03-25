@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #A9A9A9;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .drow{
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(60,1fr);
+            /* gap: 5px; */
+            height: 100vh;
+            padding: 5px 5px 5px 0;
+        }
+        .drow div{
+            height: 30px;
+            /* width: 10px; */
+            border: 1px solid black;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .left-section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .clear {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .clear span {
+            font-weight: bold;
+        }
+
+        .colors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .color {
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Manually apply background colors to the .color divs */
+        .color.red {
+            background-color: red;
+            
+        }
+
+        .color.orangered {
+            background-color: orangered;
+        }
+
+        .color.orange {
+            background-color: orange;
+        }
+
+        .color.yellow {
+            background-color: yellow;
+        }
+
+        .color.greenyellow {
+            background-color: greenyellow;
+        }
+
+        .color.yellowgreen {
+            background-color: yellowgreen;
+        }
+
+        .color.green {
+            background-color: green;
+        }
+
+        .color.teal {
+            background-color: #40e0d0;
+        }
+
+        .color.cyan {
+            background-color: #00ffff;
+        }
+
+        .color.lightblue {
+            background-color: #87cefa;
+        }
+
+        .color.blue {
+            background-color: blue;
+        }
+
+        .color.darkblue {
+            background-color: darkblue;
+        }
+
+        .color.darkviolet {
+            background-color: darkviolet;
+        }
+
+        .color.violet {
+            background-color: violet;
+        }
+
+        .color.palevioletred {
+            background-color: palevioletred;
+        }
+
+        .color.gray {
+            background-color: gray;
+        }
+
+        .color.grey {
+            background-color: grey;
+        }
+
+        .color.black {
+            background-color: black;
+        }
+
+        .color.white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <button class="clear"><span>Clear</span></button>
+            <div class="colors">
+                <div color="red" class="color red"></div>
+                <div color="orangered" class="color orangered"></div>
+                <div color="orange" class="color orange"></div>
+                <div color="yellow" class="color yellow"></div>
+                <div color="greenyellow" class="color greenyellow"></div>
+                <div color="yellowgreen" class="color yellowgreen"></div>
+                <div color="green" class="color green"></div>
+                <div color="teal" class="color teal"></div>
+                <div color="cyan" class="color cyan"></div>
+                <div color="lightblue" class="color lightblue"></div>
+                <div color="blue" class="color blue"></div>
+                <div color="darkblue" class="color darkblue"></div>
+                <div color="darkviolet" class="color darkviolet"></div>
+                <div color="violet" class="color violet"></div>
+                <div color="palevioletred" class="color palevioletred"></div>
+                <div color="gray" class="color gray"></div>
+                <div color="grey" class="color grey"></div>
+                <div color="black" class="color black"></div>
+                <div color="white" class="color white"></div>
+            </div>
+        </div>
+    </div>
+    <div class="drow" id="drow"></div>
+    <script src="./Mini_project.js"></script>
+</body>
+</html>
