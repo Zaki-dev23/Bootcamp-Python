@@ -9,13 +9,10 @@ function funcOne() {
     alert(`inside the funcOne function ${a}`);
 }
 
-
-// #1.1 - run in the console:
 funcOne()
-// #1.2 What will happen if the variable is declared 
-// with const instead of let ? 
-//////typeError : Assignement to constant
 /////----Output : a = 3
+/////  if a declare with const : error TypeError
+
 
 //#2
 let b = 0;
@@ -27,13 +24,10 @@ function funcThree() {
     alert(`inside the funcThree function ${b}`);
 }
 ///----Output : 
-
-// #2.1 - run in the console:
 funcThree()  //0
 funcTwo()  //5
 funcThree()  //5
-// #2.2 What will happen if the variable is declared 
-// with const instead of let ?
+// declare a with const :
 //VM229:3 Uncaught TypeError: Assignment to constant variable.
 
 
@@ -46,11 +40,13 @@ function funcFour() {
 function funcFive() {
     alert(`inside the funcFive function ${a}`);
 }
-// a stocked in window so know a is golbal variable and function returned 'inside the funcFive function hello'
 
 // #3.1 - run in the console:
 funcFour()
 funcFive()
+///----Output : hello
+// a stocked in window so know a is golbal variable and function returned 'inside the funcFive function hello'
+
 
 //#4
 let c = 1;
@@ -75,7 +71,7 @@ if (true) {
 }
 alert(`outside of the if block ${d}`);
 
-// #5.1 - run the code in the console
+
 // #5.2 What will happen if the variable is declared 
 // with const instead of let ?
 

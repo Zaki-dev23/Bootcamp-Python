@@ -17,3 +17,5 @@ const kgToGram = function (inKg) {
 
 //4
 const kgToGrams = (inKg) => { return inKg * 1000}
+
+console.log(kgToGram(20));
