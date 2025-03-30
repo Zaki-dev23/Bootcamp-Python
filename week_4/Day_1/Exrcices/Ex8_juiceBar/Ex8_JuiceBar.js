@@ -4,7 +4,6 @@
 //1
 function makeJuice(size) {
     let juiceSize;
-    let ingredients = []
     switch (size) {
         case 'small':
         case 'medium':
@@ -15,9 +14,7 @@ function makeJuice(size) {
         default:
             console.log(`You should be choise one size`);
 
-            function addIngredients(ing1, ing2, ing3) {
-                ingredients.push(ing1, ing2, ing3)
-            }
+           
     }
 
     function addIngredients(firstIngredient, secondIngredient, thirdIngredient) {
