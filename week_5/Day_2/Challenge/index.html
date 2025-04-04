@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random GIF Fetcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">🎉 Random GIF Fetcher</h1>
+
+    <form action="" class="flex flex-col md:flex-row items-center gap-4 w-full max-w-2xl mb-6">
+        <input type="text" id="userSearch" placeholder="Enter a category (e.g. sun, cat, dance...)"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <button
+            class="submitBtn bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+            Fetch GIF
+        </button>
+    </form>
+
+    <div id="wrapper" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl"></div>
+
+    <button
+        class="deleteAll mt-6 bg-red-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300 shadow-md">
+        Delete All GIFs
+    </button>
+
+    <script src="./Gifs.js"></script>
+</body>
+
+</html>

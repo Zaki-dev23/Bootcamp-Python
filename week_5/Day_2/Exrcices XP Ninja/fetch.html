@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Giphy Search</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-4">
+        <form class="flex items-center space-x-3 mb-8 bg-white p-5 rounded-lg shadow-lg">
+            <input type="text" id="input" placeholder="Search for GIFs..." class="border border-gray-300 p-2 rounded-lg w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="button" id="find" class="find border rounded bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 transition-all">Find</button>
+            <button type="button" id="delete" class="delete border rounded bg-red-500 text-white px-4 py-2 hover:bg-red-600 transition-all">Delete</button>
+        </form>
+    </div>
+
+    <div class="getGiphy grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5" id="getGiphy"></div>
+
+    <div class="flex justify-between max-w-4xl mx-auto p-4">
+        <button id="prev" class="border rounded bg-gray-500 text-white px-4 py-2 hover:bg-gray-600 transition-all">Previous</button>
+        <button id="next" class="border rounded bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 transition-all">Next</button>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+
+</html>
