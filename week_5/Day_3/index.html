@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>Stars Wars</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            background-image: url(https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp);
+            font-family: 'Helvetica Neue', sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 80px;
+        }
+
+
+        .character-container {
+            border: 2px solid yellow;
+            border-radius: 10px;
+            text-align: center;
+            padding: 30px;
+            font-size: 1rem;
+            width: 400px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+
+        .btn {
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            font-size: 1.2rem;
+            border: 2px solid yellow;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        .handleError {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #loading-section {
+            margin: auto auto;
+            font-size: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style='color: yellow; margin: 0 -10px;' class="h1">
+        <div style="letter-spacing: 50px;"> Star </div>
+        <div style="letter-spacing: 35px;">Wars</div>
+    </h1>
+    <div class="character-container">
+        <div class="displayNone">
+            <h1>Star Wars Character</h1>
+            <p id="name">Name: ???</p>
+            <p id="height">Height: ???</p>
+            <p id="gender">Gender: ???</p>
+            <p id="birth">Birth Year: ???</p>
+            <p id="homeworld">Homeworld: ???</p>
+        </div>
+        <div class="handleError"></div>
+        <div id="loading-section">
+            <i id="loading-spinner" class="fas fa-spinner fa-spin" style="display: none"></i>
+            <span id="loading-text"></span>
+        </div>
+    </div>
+
+    <button class="btn">Get Random Character</button>
+
+    <script src="./StarsWarsProject.js"></script>
+</body>
+
+</html>
